@@ -1,69 +1,87 @@
 /*
 ===================================================
 File Name : Login.jsx
-Purpose   : Displays the User Login Page
+Purpose   : User Login Page
 Project   : CyberShield360
 Created By: Aniket Fuke
 ===================================================
 */
 
+// Import React Hook
+import { useState } from "react";
+
+// Import Eye Icons
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 // Login Component
-// This component shows the login page.
 function Login() {
 
-  return (
+    // Store password visibility
+    const [showPassword, setShowPassword] = useState(false);
 
-    // Main container
-    <div className="login-container">
+    return (
 
-      {/* Project Logo / Title */}
-      <h1>🛡️ CyberShield360</h1>
+        // Main Login Container
+        <div className="login-container">
 
-      {/* Page Heading */}
-      <h2>Welcome Back</h2>
+            {/* Project Title */}
+            <h1>🛡️ CyberShield360</h1>
 
-      {/* Small Description */}
-      <p>Please login to continue</p>
+            {/* Welcome Heading */}
+            <h2>Welcome Back</h2>
 
-      {/* -------------------------------
-          Email Input Field
-         ------------------------------- */}
-      <input
-        type="email"
-        placeholder="Enter your Email"
-      />
+            {/* Small Description */}
+            <p>Please login to continue</p>
 
-      <br /><br />
+            {/* Email Input Field */}
+            <input
+                type="email"
+                placeholder="Enter your Email"
+            />
 
-      {/* -------------------------------
-          Password Input Field
-         ------------------------------- */}
-      <input
-        type="password"
-        placeholder="Enter your Password"
-      />
+            <br /><br />
 
-      <br /><br />
+            {/* Password Box */}
+            <div className="password-box">
 
-      {/* Login Button */}
-      <button
-      onClick={() => {
-        alert("Welcome to CyberShield360!");
-        }}>
-          Login
-          </button>
+                {/* Password Input */}
+                <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter your Password"
+                />
 
-      <br /><br />
+                {/* Eye Icon */}
+                <span
+                    className="eye-icon"
+                    onClick={() => setShowPassword(!showPassword)}
+                >
+                    {/* Change Eye Icon */}
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
 
-      {/* Register Link */}
-      <p>
-        Don't have an account?
-        <a href="#"> Register</a>
-      </p>
+            </div>
 
-    </div>
+            <br /><br />
 
-  );
+            {/* Login Button */}
+            <button
+                onClick={() => {
+                    alert("Welcome to CyberShield360!");
+                }}
+            >
+                Login
+            </button>
+
+            <br /><br />
+
+            {/* Register Link */}
+            <p>
+                Don't have an account?
+                <a href="#"> Register</a>
+            </p>
+
+        </div>
+    );
 }
 
 // Export Login Component

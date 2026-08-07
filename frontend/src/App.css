@@ -3,21 +3,35 @@
 File Name : App.css
 Purpose   : Styling for Login Page
 Project   : CyberShield360
+Created By: Aniket Fuke
 ===================================================
 */
 
-/* Whole page background */
+/* ===========================
+   Whole Page Background
+=========================== */
+
 body{
+
     margin:0;
+
     padding:0;
+
     background:#0f172a;
+
     font-family:Arial, Helvetica, sans-serif;
+
 }
 
-/* Main Login Box */
+
+/* ===========================
+   Main Login Container
+=========================== */
+
 .login-container{
 
     width:400px;
+
     margin:80px auto;
 
     background:white;
@@ -32,46 +46,142 @@ body{
 
 }
 
-/* Project Title */
+
+/* ===========================
+   Project Title
+=========================== */
+
 .login-container h1{
 
     color:#2563eb;
 
 }
 
-/* Welcome Text */
+
+/* ===========================
+   Welcome Heading
+=========================== */
+
 .login-container h2{
 
     color:#333;
 
 }
 
-/* Description */
+
+/* ===========================
+   Description Text
+=========================== */
+
 .login-container p{
 
     color:gray;
 
 }
 
-/* Input Box */
-.login-container input{
 
-    width:90%;
+/* ===========================
+   Email Input Field
+=========================== */
+
+.login-container > input{
+
+    width:100%;
 
     padding:12px;
 
-    border-radius:8px;
-
     border:1px solid gray;
+
+    border-radius:8px;
 
     font-size:16px;
 
+    box-sizing:border-box;
+
 }
 
-/* Login Button */
+
+/* ===========================
+   Password Box
+=========================== */
+
+.password-box{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid gray;
+
+    border-radius:8px;
+
+    background:white;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   Password Input Field
+=========================== */
+
+.password-box input{
+
+    flex:1;
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:white;
+
+    color:black;
+
+    padding:12px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ===========================
+   Eye Icon
+=========================== */
+
+.eye-icon{
+
+    width:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    color:#2563eb;
+
+    font-size:20px;
+
+}
+
+
+/* ===========================
+   Login Button
+=========================== */
+
 .login-container button{
 
-    width:95%;
+    width:100%;
 
     padding:12px;
 
@@ -89,18 +199,37 @@ body{
 
 }
 
-/* Button Hover Effect */
+
+/* ===========================
+   Button Hover Effect
+=========================== */
+
 .login-container button:hover{
 
     background:#1d4ed8;
 
 }
 
-/* Register Link */
+
+/* ===========================
+   Register Link
+=========================== */
+
 .login-container a{
 
     color:#2563eb;
 
     text-decoration:none;
+
+}
+
+
+/* ===========================
+   Register Link Hover
+=========================== */
+
+.login-container a:hover{
+
+    text-decoration:underline;
 
 }
